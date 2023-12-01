@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blynk Control</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Blynk Control</h1>
+  
+  <button onclick="turnOn()">Turn Off</button>
+  <button onclick="turnOff()">Turn On</button>
+
+  <script>
+    function turnOn() {
+      fetch('https://blynk.cloud/external/api/update?token=Ob1fca2v_Xmi2k_sgmfvg97KgL-ZXVNA&V0=1');
+    }
+
+    function turnOff() {
+      fetch('https://blynk.cloud/external/api/update?token=Ob1fca2v_Xmi2k_sgmfvg97KgL-ZXVNA&V0=0');
+    }
+  </script>
+</body>
+</html>
